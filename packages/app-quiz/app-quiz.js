@@ -1,12 +1,5 @@
-// Write your package code here!
 
-
-
-Template.RunQuiz.helpers({
-});
-
-
-function answerQuiz(e) {
+function answerQuestion(e) {
   e.preventDefault();
 
   var button = e.currentTarget;
@@ -20,16 +13,10 @@ function answerQuiz(e) {
 
 }
 
-
-Template.RunQuiz.events({
-
-})
-
-
 Template.Binary.events({
-  "click .quiz-answer": answerQuiz
+  "click .quiz-answer": answerQuestion
 });
 
 Template.MultipleChoice.events({
-  "click .quiz-answer": answerQuiz
+  "click .quiz-answer": answerQuestion
 });
