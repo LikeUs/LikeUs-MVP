@@ -1,0 +1,68 @@
+
+<template name="RunQuiz">
+
+  {{#ionView}}
+  {{#ionContent}}
+
+  {{#contentFor "headerTitle"}}
+  <h1 class="title">Quiz #1</h1>
+  {{/contentFor}}
+
+  {{#each quiz.questions}}
+
+  {{> Template.dynamic template=template }}
+
+  {{/each}}
+
+  <div class="card-deck-background">
+  </div>
+
+  {{/ionContent}}
+  {{/ionView}}
+</template>
+
+
+<template name="MultipleChoice">
+
+  <div class="list card quiz-question-card multiple-choice {{theme}}">
+
+    <div class="item quiz-question">
+      <div class="question-icon"></div>
+      {{question}}
+    </div>
+
+
+    {{#each answers}}
+    <div class="item quiz-answer">
+      {{.}}
+    </div>
+    {{/each}}
+
+  </div>
+
+</template>
+
+
+<template name="Binary">
+  <div class="list card quiz-question-card binary {{theme}}">
+
+    <div class="item quiz-question">
+      <div class="question-icon"></div>
+      {{question}}
+    </div>
+
+    <div class="item item-body">
+
+      <div class="grid">
+        <div class="row">
+        {{#each answers}}
+
+        <div class="col quiz-answer">{{.}}</div>
+
+        {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</template>

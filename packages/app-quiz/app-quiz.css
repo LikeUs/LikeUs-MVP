@@ -1,0 +1,69 @@
+
+.card.list.quiz-question-card {
+  color: white;
+  z-index: 1;
+  position: absolute;
+
+  top: 0;
+
+  bottom: 0;
+
+  left: 0;
+
+  right: 0;
+
+
+}
+
+.card.list.quiz-question-card: {
+
+}
+
+.card.list.quiz-question-card .item {
+  background-color: transparent;
+}
+.card.list.quiz-question-card .item {
+  background-color: transparent;
+}
+
+/*
+light blue - #4e98cf
+dark blue -  #4873a7
+purple     - #5a5386
+light teal - #77559e
+pale green - #38cfd6
+*/
+
+.card.quiz-question-card.binary {
+
+}
+
+.card.quiz-question-card.multiple-choice {
+}
+
+.card.quiz-question-card.light-blue {
+  background-color: #4e98cf;
+}
+
+.card.quiz-question-card .quiz-answer {
+  text-align: center;
+}
+
+.card.quiz-question-card.light-blue .quiz-answer {
+  color: white;
+}
+.card.quiz-question-card.dark-blue {
+  background-color: #4873a7;
+}
+.card.quiz-question-card.dark-blue .quiz-answer {
+  color: white;
+}
+.card.quiz-question-card.purple {
+  background-color: #5a5386;
+}
+.card.quiz-question-card.light-teal {
+  background-color: #77559e;
+}
+.card.quiz-question-card.pale-green {
+  background-color: #38cfd6;
+}
