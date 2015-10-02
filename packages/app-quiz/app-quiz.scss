@@ -23,6 +23,8 @@ $gold:       #fcd534;
   left: 0;
   right: 0;
 
+  margin: 55px 30px 55px 30px;
+
   border-radius: 10px;
 
   .quiz-question {
@@ -33,6 +35,7 @@ $gold:       #fcd534;
  .quiz-answer {
    text-align: center;
    font-weight: bold;
+    margin-bottom: -20px;
 
    &.item:hover, &.col:hover { color: $gold; }
  }
@@ -46,11 +49,11 @@ $gold:       #fcd534;
 
  &.binary {
    .question-icon {
-     margin: 20px auto;
-     background-color: rgba(255,255,255,.5);
-     height: 200px;
-     width: 200px;
-     border-radius: 100px;
+    margin: 38px auto 38px;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 170px;
+    width: 170px;
+    border-radius: 100px;
    }
 
    .item-body {
@@ -101,3 +104,16 @@ $gold:       #fcd534;
    }
  }
 }
+
+.bar-light {
+    border-color: none;
+    margin-top: 23px;
+    font-family: quicksand;
+    text-transform: uppercase;
+}
+.bar-light .title {
+    color: #5a5386;
+}
+
+
+
