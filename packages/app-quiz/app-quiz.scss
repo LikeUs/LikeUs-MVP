@@ -38,8 +38,8 @@ $gold:       #fcd534;
  .quiz-answer {
    text-align: center;
    font-size: 1.8em;
-   
-    
+
+
 
    &.item:hover, &.col:hover { color: $gold; }
  }
@@ -112,12 +112,8 @@ $gold:       #fcd534;
 .bar-light {
     border-color: none;
     margin-top: 23px;
-    font-family: quicksand;
     text-transform: uppercase;
 }
 .bar-light .title {
     color: #5a5386;
 }
-
-
-
