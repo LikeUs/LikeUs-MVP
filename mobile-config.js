@@ -14,8 +14,8 @@ App.icons({
 });
 
 App.launchScreens({
-  'iphone': 'resources/splash/242x480.png',
-  'iphone5': 'resources/splash/242x480.png',
-  'iphone6': 'resources/splash/242x480.png',
-  'iphone6p_portrait': 'resources/splash/242x480.png'	
+  'iphone': 'resources/splash/640x920.png',
+  'iphone5': 'resources/splash/640x1096.png',
+  'iphone6': 'resources/splash/750x1294.png',
+  'iphone6p_portrait': 'resources/splash/1242x2148.png'	
 });
