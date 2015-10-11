@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'app-quiz',
+  name: 'app-coming-soon',
   version: '0.0.1',
   // Brief, one-line summary of the package.
   summary: '',
@@ -11,26 +11,20 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.2.0.1');
+  api.versionsFrom('1.2.0.2');
   api.use('ecmascript');
   api.use('templating', 'client');
   api.use('deps');
-  api.use('ejson');
-  api.use('session');
   api.use('fourseven:scss');
+  api.addFiles('app-coming-soon.js', 'client');
+  api.addFiles('app-coming-soon.html', 'client');
 
-  api.export(['TakeQuiz']);
-
-  api.addFiles('app-quiz.scss', 'client');
-  api.addFiles('app-quiz.html', 'client');
-  api.addFiles('app-quiz.js', 'client');
-
-
+  api.export('ComingSoon');
 });
 
 Package.onTest(function(api) {
   api.use('ecmascript');
   api.use('tinytest');
-  api.use('app-quiz');
-  api.addFiles('app-quiz-tests.js');
+  api.use('app-coming-soon');
+  api.addFiles('app-coming-soon-tests.js');
 });

@@ -5,6 +5,7 @@ if (Meteor.isClient) {
 var quiz = {
   questions: [
     {
+      id: "0",
       question: "Morning person?",
       type: "Binary",
       answers: ["No", "Yes"],
@@ -13,6 +14,7 @@ var quiz = {
     },
 
     {
+      id: "1",
       question: "Favorite beverage?",
       type: "MultipleChoice",
       answers: ["Cocktail, please", "Beer!", "I prefer wine", "Just water, thanks"],
@@ -21,6 +23,7 @@ var quiz = {
     },
 
     {
+      id: "2",
       question: "Party?",
       type: "MultipleChoice",
       answers: ["A couple people", "Several people", "More the merrier!", "Me and a book"],
@@ -28,6 +31,7 @@ var quiz = {
       theme: "purple"
     },
     {
+      id: "3",
       question: "Hugger?",
       type: "Binary",
       answers: ["No", "Yes"],
@@ -36,6 +40,7 @@ var quiz = {
     },
 
     {
+      id: "4",
       question: "Favorite class in school?",
       type: "MultipleChoice",
       answers: ["Math or Science", "P.E.", "English", "Art or Music"],
@@ -43,10 +48,16 @@ var quiz = {
       theme: "light-teal"
     },
   ]
-}
+};
 
 if (Meteor.isClient) {
   Meteor.startup(function() {
-    TakeQuiz(quiz, Viewport('main'));
+    var main = Viewport('main');
+
+    TakeQuiz(quiz, main)
+      .then(function() {
+        ComingSoon(main);
+      });
+
   });
 }

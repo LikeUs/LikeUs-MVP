@@ -23,3 +23,5 @@ ejson
 app-quiz
 dispatch:viewport
 dispatch:blaze-emitter
+app-coming-soon
+frozeman:q

@@ -8,9 +8,9 @@
 
 
   {{#each quiz.questions}}
-
+  {{#unless answer}}
   {{> Template.dynamic template=template }}
-
+  {{/unless}}
   {{/each}}
 
   <div class="card-deck-background">
@@ -30,7 +30,7 @@
     </div>
 
     {{#each answers}}
-    <div class="item quiz-answer">
+    <div class="item quiz-answer" data-question-id="{{../id}}">
       {{.}}
     </div>
     {{/each}}
@@ -52,14 +52,15 @@
 
       <div class="grid">
         <div class="row">
-        {{#each answers}}
+          {{#each answers}}
 
-        <div class="col quiz-answer">{{.}}</div>
+          <div class="col quiz-answer" data-question-id="{{../id}}">
+            {{.}}
+          </div>
 
-        {{/each}}
+          {{/each}}
         </div>
       </div>
     </div>
   </div>
-
 </template>
