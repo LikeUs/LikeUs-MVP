@@ -20,8 +20,7 @@ autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 fourseven:scss
 ejson
-app-quiz
 dispatch:viewport
 dispatch:blaze-emitter
-app-coming-soon
 frozeman:q
+app-onboarding

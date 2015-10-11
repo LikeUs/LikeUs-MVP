@@ -54,10 +54,7 @@ if (Meteor.isClient) {
   Meteor.startup(function() {
     var main = Viewport('main');
 
-    TakeQuiz(quiz, main)
-      .then(function() {
-        ComingSoon(main);
-      });
+    RunOnboarding(quiz, main);
 
   });
 }

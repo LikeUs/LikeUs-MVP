@@ -1,4 +1,5 @@
 app-coming-soon@0.0.1
+app-onboarding@0.0.1
 app-quiz@0.0.1
 autopublish@1.0.4
 autoupdate@1.2.3
@@ -21,7 +22,8 @@ ddp-server@1.2.1
 deps@1.0.9
 diff-sequence@1.0.1
 dispatch:blaze-emitter@0.0.9
-dispatch:viewport@0.0.3
+dispatch:view-extensions@0.0.2
+dispatch:viewport@1.0.0
 ecmascript@0.1.5
 ecmascript-collections@0.1.6
 ejson@1.0.7
