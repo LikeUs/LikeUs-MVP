@@ -1,6 +1,7 @@
 if (Meteor.isClient) {
   Template.registerHelper("stringify", JSON.stringify);
 }
+
 var quiz = {
   questions: [
     {
@@ -44,28 +45,8 @@ var quiz = {
   ]
 }
 
-
-
-Router.configure({
-  layoutTemplate: 'layout'
-});
-
-Router.map(function() {
-
-  this.route('index', {
-    path: '/',
-    data: { quiz: quiz }
-  });
-});
-
 if (Meteor.isClient) {
-  // counter starts at 0
-
-
-}
-
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
+  Meteor.startup(function() {
+    TakeQuiz(quiz, Viewport('main'));
   });
 }

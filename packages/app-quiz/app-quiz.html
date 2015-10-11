@@ -1,12 +1,11 @@
 
-<template name="RunQuiz">
+<template name="TakeQuiz">
 
-  {{#ionView}}
-  {{#ionContent}}
-
-  {{#contentFor "headerTitle"}}
+  <div class="header">
   <h1 class="title">Quiz #1</h1>
-  {{/contentFor}}
+  </div>
+
+
 
   {{#each quiz.questions}}
 
@@ -17,8 +16,7 @@
   <div class="card-deck-background">
   </div>
 
-  {{/ionContent}}
-  {{/ionView}}
+
 </template>
 
 

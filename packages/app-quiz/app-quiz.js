@@ -1,4 +1,11 @@
 
+TakeQuiz = function(quiz, viewport) {
+
+  viewport.goTo('TakeQuiz', { data: { quiz: quiz } });
+
+};
+
+
 function answerQuestion(e) {
   e.preventDefault();
 

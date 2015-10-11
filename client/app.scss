@@ -1,8 +1,3 @@
-$loading-font-size: 22px;
-
-@import 'meteoric_ionic-sass/_ionic';
-@import 'meteoric_ionicons-sass/_ionicons';
-
 
 @font-face {
   font-family: 'Quicksand';
@@ -36,9 +31,6 @@ $loading-font-size: 22px;
   font-style: italic;
 }
 
-.contact-detail {
-  background: $stable;
-}
 
 body * {
   font-family: Quicksand;

@@ -18,11 +18,8 @@ Package.onUse(function(api) {
   api.use('ejson');
   api.use('session');
   api.use('fourseven:scss');
-  api.use('meteoric:ionic');
   api.use('fourseven:scss');
-  api.use('meteoric:ionicons-sass');
-  api.use('meteoric:ionic-sass');
-
+  api.export('TakeQuiz');
   api.addFiles('app-quiz.scss', 'client');
   api.addFiles('app-quiz.html', 'client');
   api.addFiles('app-quiz.js', 'client');
