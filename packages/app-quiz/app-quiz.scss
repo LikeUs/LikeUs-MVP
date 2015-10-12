@@ -9,8 +9,31 @@ $pale-green: #e0fdfd;
 $beige:      #f5f3e6;
 $gold:       #fcd534;
 
+body {
+  font-size: 14px;
+}
+
 .content {
+  margin-top: 60px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: $beige;
+}
+
+.top-bar {
+  border-color: none;
+  padding: 5px 0;
+  text-transform: uppercase;
+
+  .title {
+    color: #5a5386;
+    text-align: center;
+    font-size: 17px;
+    font-weight: normal;
+  }
 }
 
 .card.list.quiz-question-card {
@@ -23,7 +46,7 @@ $gold:       #fcd534;
   left: 0;
   right: 0;
 
-  margin: 55px 30px 110px 30px;
+  margin: 35px 30px 100px 30px;
 
   border-radius: 10px;
 
@@ -37,9 +60,6 @@ $gold:       #fcd534;
 
  .quiz-answer {
    text-align: center;
-   font-size: 1.8em;
-
-
 
    &.item:hover, &.col:hover { color: $gold; }
  }
@@ -47,8 +67,10 @@ $gold:       #fcd534;
 
 
  .item {
+   padding:16px;
    background-color: transparent;
    border: 0;
+   line-height: 100%;
  }
 
  &.binary {
@@ -65,7 +87,13 @@ $gold:       #fcd534;
      left: 0;
      right: 0;
      bottom: 0;
-     margin-bottom: 30px;
+     margin-bottom: 50px;
+   }
+
+   .quiz-answer {
+     display: inline-block;
+     width: 49%;
+     font-size: 2em;
    }
  }
 
@@ -76,6 +104,9 @@ $gold:       #fcd534;
      height: 100px;
      width: 100px;
      border-radius: 50px;
+   }
+   .quiz-answer {
+     font-size: 1.8em;
    }
  }
 
@@ -107,13 +138,4 @@ $gold:       #fcd534;
      &.item:hover, &.col:hover { color: $light-teal; }
    }
  }
-}
-
-.bar-light {
-    border-color: none;
-    margin-top: 23px;
-    text-transform: uppercase;
-}
-.bar-light .title {
-    color: #5a5386;
 }

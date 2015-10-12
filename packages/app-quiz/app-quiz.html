@@ -1,21 +1,27 @@
 
 <template name="TakeQuiz">
 
-  <div class="header">
-  <h1 class="title">Quiz #1</h1>
+  <div class="take-quiz">
+
+    <div class="top-bar">
+      <h1 class="title">Quiz #1</h1>
+    </div>
+
+    <div class="content">
+
+
+    {{#each quiz.questions}}
+    {{#unless answer}}
+    {{> Template.dynamic template=template }}
+    {{/unless}}
+    {{/each}}
+
+    <div class="card-deck-background">
+    </div>
+
+    </div>
+
   </div>
-
-
-
-  {{#each quiz.questions}}
-  {{#unless answer}}
-  {{> Template.dynamic template=template }}
-  {{/unless}}
-  {{/each}}
-
-  <div class="card-deck-background">
-  </div>
-
 
 </template>
 
@@ -50,17 +56,15 @@
 
     <div class="item item-body">
 
-      <div class="grid">
-        <div class="row">
-          {{#each answers}}
 
-          <div class="col quiz-answer" data-question-id="{{../id}}">
-            {{.}}
-          </div>
+      {{#each answers}}
 
-          {{/each}}
-        </div>
+      <div class="quiz-answer" data-question-id="{{../id}}">
+        {{.}}
       </div>
+
+      {{/each}}
+
     </div>
   </div>
 </template>
