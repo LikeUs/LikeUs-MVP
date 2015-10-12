@@ -19,6 +19,8 @@ Package.onUse(function(api) {
   api.use('session');
   api.use('fourseven:scss');
 
+  api.use('app-design-elements');
+
   api.export(['TakeQuiz']);
 
   api.addFiles('app-quiz.scss', 'client');

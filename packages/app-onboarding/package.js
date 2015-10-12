@@ -1,3 +1,4 @@
+
 Package.describe({
   name: 'app-onboarding',
   version: '0.0.1',
@@ -17,6 +18,8 @@ Package.onUse(function(api) {
   api.use('deps');
   api.use('ejson');
   api.use('fourseven:scss');
+
+  api.use('app-design-elements');
 
   api.use('app-quiz');
   api.use('app-coming-soon');
