@@ -25,6 +25,7 @@ Package.onUse(function(api) {
 
   api.addFiles('onboarding.html', 'client');
   api.addFiles('onboarding.js', 'client');
+  api.addFiles('onboarding.scss', 'client');
 
 });
 

@@ -13,129 +13,132 @@ body {
   font-size: 14px;
 }
 
-.content {
-  margin-top: 60px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: $beige;
-}
+.take-quiz {
 
-.top-bar {
-  border-color: none;
-  padding: 5px 0;
-  text-transform: uppercase;
-
-  .title {
-    color: #5a5386;
-    text-align: center;
-    font-size: 17px;
-    font-weight: normal;
-  }
-}
-
-.card.list.quiz-question-card {
-  color: white;
-  z-index: 1;
-  position: absolute;
-
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  margin: 35px 30px 100px 30px;
-
-  border-radius: 10px;
-
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-
-  .quiz-question {
-    text-align: center;
-    font-size: 1.3em;
-    font-weight: bold;
+  .content {
+    margin-top: 60px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $beige;
   }
 
- .quiz-answer {
-   text-align: center;
+  .top-bar {
+    border-color: none;
+    padding: 5px 0;
+    text-transform: uppercase;
 
-   &.item:hover, &.col:hover { color: $gold; }
- }
+    .title {
+      color: #5a5386;
+      text-align: center;
+      font-size: 17px;
+      font-weight: normal;
+    }
+  }
 
+  .card.list.quiz-question-card {
+    color: white;
+    z-index: 1;
+    position: absolute;
 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
- .item {
-   padding:16px;
-   background-color: transparent;
-   border: 0;
-   line-height: 100%;
- }
+    margin: 35px 30px 100px 30px;
 
- &.binary {
-   .question-icon {
-    margin: 38px auto 38px;
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 170px;
-    width: 170px;
-    border-radius: 100px;
-   }
+    border-radius: 10px;
 
-   .item-body {
-     position: absolute;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     margin-bottom: 50px;
-   }
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-   .quiz-answer {
-     display: inline-block;
-     width: 49%;
-     font-size: 2em;
-   }
- }
+    .quiz-question {
+      text-align: center;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
 
- &.multiple-choice {
-   .question-icon {
-     margin: 6px auto 20px;
-     background-color: rgba(255,255,255,.5);
-     height: 100px;
-     width: 100px;
-     border-radius: 50px;
-   }
-   .quiz-answer {
-     font-size: 1.8em;
-   }
- }
+    .quiz-answer {
+      text-align: center;
+
+      &.item:hover, &.col:hover { color: $gold; }
+    }
 
 
- /* Card Themes */
 
- &.light-blue {
-   background-color: $light-blue;
-   .item { color: white; }
- }
+    .item {
+      padding:16px;
+      background-color: transparent;
+      border: 0;
+      line-height: 100%;
+    }
 
- &.dark-blue {
-   background-color: $dark-blue;
-   .item { color: white; }
- }
- &.purple {
-   background-color: $purple;
-   .item { color: white; }
- }
- &.light-teal {
-   background-color: $light-teal;
-   .item { color: white; }
- }
- &.pale-green {
-   background-color: $pale-green;
-   .item { color: $purple; }
+    &.binary {
+      .question-icon {
+        margin: 38px auto 38px;
+        background-color: rgba(255, 255, 255, 0.5);
+        height: 170px;
+        width: 170px;
+        border-radius: 100px;
+      }
 
-   .quiz-answer {
-     &.item:hover, &.col:hover { color: $light-teal; }
-   }
- }
+      .item-body {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-bottom: 50px;
+      }
+
+      .quiz-answer {
+        display: inline-block;
+        width: 49%;
+        font-size: 2em;
+      }
+    }
+
+    &.multiple-choice {
+      .question-icon {
+        margin: 6px auto 20px;
+        background-color: rgba(255,255,255,.5);
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+      }
+      .quiz-answer {
+        font-size: 1.8em;
+      }
+    }
+
+
+    /* Card Themes */
+
+    &.light-blue {
+      background-color: $light-blue;
+      .item { color: white; }
+    }
+
+    &.dark-blue {
+      background-color: $dark-blue;
+      .item { color: white; }
+    }
+    &.purple {
+      background-color: $purple;
+      .item { color: white; }
+    }
+    &.light-teal {
+      background-color: $light-teal;
+      .item { color: white; }
+    }
+    &.pale-green {
+      background-color: $pale-green;
+      .item { color: $purple; }
+
+      .quiz-answer {
+        &.item:hover, &.col:hover { color: $light-teal; }
+      }
+    }
+  }
 }

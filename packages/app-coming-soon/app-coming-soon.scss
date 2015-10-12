@@ -1,0 +1,22 @@
+$dark-blue:  #4873a7;
+
+.coming-soon {
+background-color: $dark-blue;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+
+  .content {
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 60px 30px;
+    position: absolute;
+    color: white;
+  }
+}

@@ -18,6 +18,7 @@ Package.onUse(function(api) {
   api.use('fourseven:scss');
   api.addFiles('app-coming-soon.js', 'client');
   api.addFiles('app-coming-soon.html', 'client');
+  api.addFiles('app-coming-soon.scss', 'client');
 
   api.export('ComingSoon');
 });
