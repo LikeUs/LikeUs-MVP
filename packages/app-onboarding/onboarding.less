@@ -1,7 +1,7 @@
-@import "{app-design-elements}/_colors.scss";
+@import "{app-design-elements}/colors.import.less";
 
-.coming-soon {
-background-color: $dark-blue;
+.onboarding-continue {
+  background-color: @dark-blue;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -19,4 +19,11 @@ background-color: $dark-blue;
     position: absolute;
     color: white;
   }
+
+  .top-bar {
+    background-color: transparent;
+    padding: 5px 0;
+    height: 30px;
+  }
+
 }

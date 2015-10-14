@@ -17,7 +17,6 @@ Package.onUse(function(api) {
   api.use('templating', 'client');
   api.use('deps');
   api.use('ejson');
-  api.use('fourseven:scss');
 
   api.use('app-design-elements');
 
@@ -28,7 +27,7 @@ Package.onUse(function(api) {
 
   api.addFiles('onboarding.html', 'client');
   api.addFiles('onboarding.js', 'client');
-  api.addFiles('onboarding.scss', 'client');
+  api.addFiles('onboarding.less', 'client');
 
 });
 

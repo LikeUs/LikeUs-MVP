@@ -12,9 +12,20 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.0.2');
-  api.use('fourseven:scss');
-  api.addFiles('_colors.scss', 'client', {isImport: true});
+  api.use('semantic:ui-css');
+  api.use('less');
+  api.imply('semantic:ui-css');
+  api.imply('less');
 
+  api.addFiles('fonts.less', 'client');
+  api.addFiles('colors.import.less', 'client', {isImport: true});
+
+  api.addAssets([
+    'fonts/Quicksand-BoldItalic.otf',
+    'fonts/Quicksand-Bold.otf',
+    'fonts/Quicksand-Italic.otf',
+    'fonts/Quicksand-Regular.otf',
+  ], 'client');
 
 });
 

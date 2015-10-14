@@ -1,6 +1,4 @@
-
-
-@import "{app-design-elements}/_colors.scss";
+@import "{app-design-elements}/colors.import.less";
 
 
 body {
@@ -16,7 +14,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: $beige;
+    background-color: @beige;
   }
 
   .top-bar {
@@ -57,7 +55,7 @@ body {
     .quiz-answer {
       text-align: center;
 
-      &.item:hover, &.col:hover { color: $gold; }
+      &.item:hover, &.col:hover { color: @gold; }
     }
 
 
@@ -110,28 +108,28 @@ body {
     /* Card Themes */
 
     &.light-blue {
-      background-color: $light-blue;
+      background-color: @light-blue;
       .item { color: white; }
     }
 
     &.dark-blue {
-      background-color: $dark-blue;
+      background-color: @dark-blue;
       .item { color: white; }
     }
     &.purple {
-      background-color: $purple;
+      background-color: @purple;
       .item { color: white; }
     }
     &.light-teal {
-      background-color: $light-teal;
+      background-color: @light-teal;
       .item { color: white; }
     }
     &.pale-green {
-      background-color: $pale-green;
-      .item { color: $purple; }
+      background-color: @pale-green;
+      .item { color: @purple; }
 
       .quiz-answer {
-        &.item:hover, &.col:hover { color: $light-teal; }
+        &.item:hover, &.col:hover { color: @light-teal; }
       }
     }
   }
