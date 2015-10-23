@@ -1,0 +1,2 @@
+
+AccountsGuest.anonymous = true
