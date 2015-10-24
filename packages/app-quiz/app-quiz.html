@@ -31,7 +31,11 @@
   <div class="list card quiz-question-card multiple-choice {{theme}}">
 
     <div class="item quiz-question">
+      {{#if image}}
+      <img class="ui centered image question-image" src="{{image}}">
+      {{else}}
       <div class="question-icon"></div>
+      {{/if}}
       {{question}}
     </div>
 
@@ -50,7 +54,11 @@
   <div class="list card quiz-question-card binary {{theme}}">
 
     <div class="item quiz-question">
+      {{#if image}}
+      <img class="ui centered image question-image" src="{{image}}">
+      {{else}}
       <div class="question-icon"></div>
+      {{/if}}
       {{question}}
     </div>
 
