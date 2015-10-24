@@ -15,8 +15,10 @@ Package.onUse(function(api) {
   api.use('ecmascript');
   api.use('accounts-base');
   api.use('artwells:accounts-guest');
+  api.use('app-accounts-sms');
 
   api.addFiles('server-config.js', 'server');
+  api.addFiles('client-config.js', 'client');
 });
 
 Package.onTest(function(api) {
