@@ -1,6 +1,6 @@
 @import "{app-design-elements}/colors.import.less";
 
-.onboarding-continue {
+.onboarding-continue, .onboarding-get-phone, .onboarding-verify-phone {
   background-color: @dark-blue;
   position: absolute;
   top: 0;
@@ -25,5 +25,19 @@
     padding: 5px 0;
     height: 30px;
   }
+
+  .fields .field {
+    text-align: center;
+
+    input[name=phone] {
+      width: 150px;
+    }
+
+    input[name=code] {
+      width: 100px;
+    }
+  }
+
+
 
 }
