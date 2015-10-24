@@ -32,16 +32,18 @@
 
     <div class="content">
 
-      <form>
+      <form class="ui large form">
         <p>Type your number</p>
 
-        <div class="ui input">
-          <input type="phone" name="phone">
+        <div class="fields">
+        <div class="sixteen wide field">
+          <input type="text" name="phone" size="10">
         </div>
-
-        <div>
+        <div class="sixteen wide field">
           <button class="ui icon button" rel="continue">Continue</button>
         </div>
+        </div>
+
 
       </form>
     </div>
@@ -58,17 +60,17 @@
 
     <div class="content">
 
-      <form>
+      <form class="ui large form">
         <p>We sent a 4-digit verification code to your number. Enter it below.</p>
+        <div class="fields">
+          <div class="sixteen wide field">
+            <input type="text" name="code" size="4">
+          </div>
 
-        <div class="ui input">
-          <input type="text" name="code">
+          <div class="sixteen wide field">
+            <button class="ui icon button" rel="continue">Verify</button>
+          </div>
         </div>
-
-        <div>
-          <button class="ui icon button" rel="continue">Verify</button>
-        </div>
-
       </form>
     </div>
 
