@@ -10,7 +10,8 @@ var quiz = {
       type: "Binary",
       answers: ["No", "Yes"],
       template: "Binary",
-      theme: "pale-green"
+      theme: "pale-green",
+      image: "/images/morningperson.png"
     },
 
     {
@@ -28,7 +29,8 @@ var quiz = {
       type: "MultipleChoice",
       answers: ["A couple people", "Several people", "More the merrier!", "Me and a book"],
       template: "MultipleChoice",
-      theme: "purple"
+      theme: "purple",
+      image: "/images/party.png"
     },
     {
       id: "3",
@@ -36,7 +38,8 @@ var quiz = {
       type: "Binary",
       answers: ["No", "Yes"],
       template: "Binary",
-      theme: "dark-blue"
+      theme: "dark-blue",
+      image: "/images/hugger.png"
     },
 
     {
@@ -45,7 +48,8 @@ var quiz = {
       type: "MultipleChoice",
       answers: ["Math or Science", "P.E.", "English", "Art or Music"],
       template: "MultipleChoice",
-      theme: "light-teal"
+      theme: "light-teal",
+      image: "/images/favoriteclass.png"
     },
   ]
 };
