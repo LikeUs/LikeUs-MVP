@@ -20,7 +20,8 @@ var quiz = {
       type: "MultipleChoice",
       answers: ["Cocktail, please", "Beer!", "I prefer wine", "Just water, thanks"],
       template: "MultipleChoice",
-      theme: "light-blue"
+      theme: "light-blue",
+      image: "/images/beverage.png"
     },
 
     {
