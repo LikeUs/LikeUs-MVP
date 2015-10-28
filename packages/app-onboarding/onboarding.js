@@ -21,14 +21,21 @@ RunOnboarding = function(quiz, viewport) {
       return runTemplate("OnboardingVerifyPhone", viewport);
     })
     .then(function() {
-      return ComingSoon(viewport);
+      return runTemplate("OnboardingFacebook", viewport);
+    })
+    .then(function() {
+      return runTemplate("OnboardingProfile", viewport);
     }).done();
 
 };
 
 
 Template.OnboardingContinue.events({
-  "click [rel=continue]": function() { Template.currentData().deferred.resolve(); }
+  "click [rel=continue]": function() {
+    var deferred = Template.currentData().deferred;
+
+    deferred.resolve();
+  }
 });
 
 Template.OnboardingGetPhone.events({
@@ -69,5 +76,33 @@ Template.OnboardingVerifyPhone.events({
       }
     });
 
+  }
+});
+
+Template.OnboardingFacebook.events({
+  "submit form": function(e) {
+    e.preventDefault();
+    var deferred = Template.currentData().deferred;
+    Meteor.loginWithFacebook(function(err) {
+      if (err) {
+        console.log(err);
+        deferred.reject(err);
+      } else {
+        deferred.resolve();
+      }
+    });
+  }
+});
+
+Template.OnboardingProfile.helpers({
+  profileData: function() { return Meteor.user(); }
+});
+
+Template.OnboardingProfile.events({
+  "submit form": function(e) {
+    e.preventDefault();
+    Meteor.logout(function() {
+      window.location.reload();
+    }); 
   }
 });

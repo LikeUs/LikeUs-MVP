@@ -77,3 +77,37 @@
   </div>
 
 </template>
+
+<template name="OnboardingFacebook">
+
+  <div class="onboarding-facebook">
+    <div class="top-bar">
+    </div>
+
+    <div class="content">
+
+      <form>
+        <button class="ui button">Pull your profile info from Facebook</button>
+      </form>
+    </div>
+
+  </div>
+
+</template>
+
+<template name="OnboardingProfile">
+  <div class="onboarding-profile">
+    <div class="top-bar">
+    </div>
+
+    <div class="content">
+      <p>This is your profile data:</p>
+      <div>{{stringify profileData}}</div>
+
+      <form>
+        <button>Start Over</button>
+      </form>
+    </div>
+
+  </div>
+</template>

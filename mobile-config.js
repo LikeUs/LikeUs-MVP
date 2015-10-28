@@ -1,3 +1,5 @@
+
+App.accessRule("*");
 App.info({
   id: 'com.likeus',
   name: 'LikeUs',

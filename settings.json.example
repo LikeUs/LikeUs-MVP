@@ -3,5 +3,21 @@
     "FROM": "",
     "SID": "",
     "TOKEN": ""
+  },
+
+ "FACEBOOK": {
+    "APP_ID": "",
+    "SECRET": ""
+  },
+
+ "public": {
+    "facebook": {
+      "permissions": [
+        "public_profile",
+        "email",
+        "user_friends"
+      ]
+    }
   }
+
 }

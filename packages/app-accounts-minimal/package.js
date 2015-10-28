@@ -17,6 +17,8 @@ Package.onUse(function(api) {
   api.use('artwells:accounts-guest');
   api.use('app-accounts-sms');
   api.use('btafel:accounts-facebook-cordova');
+  api.imply('accounts-base', ['client', 'server']);
+  api.imply('btafel:accounts-facebook-cordova', ['client', 'server']);
 
   api.addFiles('server-config.js', 'server');
   api.addFiles('client-config.js', 'client');
