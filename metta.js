@@ -54,11 +54,20 @@ var quiz = {
   ]
 };
 
-if (Meteor.isClient) {
-  Meteor.startup(function() {
-    var main = Viewport('main');
+FlowRouter.route('/', {
+  triggersEnter: function(context, redirect) {
+    redirect('/onboarding');
+  }
+});
 
-    RunOnboarding(quiz, main);
+FlowRouter.route('/onboarding', {
+  action: function() { RunOnboarding(quiz, Viewport('main')); }
+});
 
-  });
-}
+FlowRouter.route('/home', {
+  action: function() { Viewport('main').goTo("Home") }
+});
+
+FlowRouter.route('/coming-soon', {
+  action: function() { Viewport('main').goTo('ComingSoon'); }
+});

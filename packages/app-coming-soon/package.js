@@ -17,8 +17,8 @@ Package.onUse(function(api) {
   api.use('deps');
   api.use('app-design-elements');
 
-  api.addFiles('app-coming-soon.js', 'client');
   api.addFiles('app-coming-soon.html', 'client');
+  api.addFiles('app-coming-soon.js', 'client');
   api.addFiles('app-coming-soon.less', 'client');
 
   api.export('ComingSoon');

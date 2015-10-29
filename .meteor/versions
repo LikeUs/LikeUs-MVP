@@ -4,6 +4,7 @@ app-accounts-minimal@0.0.1
 app-accounts-sms@0.0.1
 app-coming-soon@0.0.1
 app-design-elements@0.0.1
+app-home@0.0.1
 app-onboarding@0.0.1
 app-quiz@0.0.1
 artwells:accounts-guest@0.1.13
@@ -24,6 +25,8 @@ caching-compiler@1.0.0
 caching-html-compiler@1.0.2
 callback-hook@1.0.4
 check@1.0.6
+coffeescript@1.0.10
+cosmos:browserify@0.5.1
 dburles:mongo-collection-instances@0.3.4
 ddp@1.2.2
 ddp-client@1.2.1
@@ -53,6 +56,8 @@ id-map@1.0.4
 insecure@1.0.4
 jperl:match-ex@1.0.0
 jquery@1.11.4
+kadira:blaze-layout@2.0.1
+kadira:flow-router@2.7.0
 lai:collection-extensions@0.1.4
 launch-screen@1.0.4
 less@2.5.0_3
@@ -84,7 +89,7 @@ reactive-var@1.0.6
 reload@1.1.4
 retry@1.0.4
 routepolicy@1.0.6
-semantic:ui-css@1.9.3
+semantic:ui-css@2.1.2
 service-configuration@1.0.5
 session@1.1.1
 spacebars@1.0.7

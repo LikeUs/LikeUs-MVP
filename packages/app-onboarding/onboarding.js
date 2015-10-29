@@ -1,4 +1,3 @@
-
 var runTemplate = function(template, viewport) {
   var deferred = Q.defer();
 
@@ -24,7 +23,7 @@ RunOnboarding = function(quiz, viewport) {
       return runTemplate("OnboardingFacebook", viewport);
     })
     .then(function() {
-      return runTemplate("OnboardingProfile", viewport);
+      FlowRouter.go("/home");
     }).done();
 
 };
@@ -83,7 +82,10 @@ Template.OnboardingFacebook.events({
   "submit form": function(e) {
     e.preventDefault();
     var deferred = Template.currentData().deferred;
-    Meteor.loginWithFacebook(function(err) {
+    var options = {};
+    options.requestPermissions = Meteor.settings.public.facebook.permissions;
+
+    Meteor.loginWithFacebook(options, function(err) {
       if (err) {
         console.log(err);
         deferred.reject(err);
@@ -103,6 +105,6 @@ Template.OnboardingProfile.events({
     e.preventDefault();
     Meteor.logout(function() {
       window.location.reload();
-    }); 
+    });
   }
 });

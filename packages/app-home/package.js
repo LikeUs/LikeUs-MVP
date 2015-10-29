@@ -1,6 +1,5 @@
-
 Package.describe({
-  name: 'app-onboarding',
+  name: 'app-home',
   version: '0.0.1',
   // Brief, one-line summary of the package.
   summary: '',
@@ -14,28 +13,18 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.0.2');
   api.use('ecmascript');
-  api.use('templating', 'client');
-  api.use('deps');
-  api.use('ejson');
 
+  api.use('templating');
+
+  api.use('kadira:flow-router');
+  api.use('kadira:blaze-layout');
 
   api.use('app-design-elements');
 
-  api.use('app-quiz');
-  api.use('app-coming-soon');
-
-
-  api.export(['RunOnboarding']);
-
-  api.addFiles('onboarding.html', 'client');
-  api.addFiles('onboarding.js', 'client');
-  api.addFiles('onboarding.less', 'client');
-
+  api.addFiles('home.html', 'client');
+  api.addFiles('home.js', 'client');
+  api.addFiles('home.less', 'client');
 });
 
 Package.onTest(function(api) {
-  api.use('ecmascript');
-  api.use('tinytest');
-  api.use('onboarding');
-  api.addFiles('onboarding-tests.js');
 });

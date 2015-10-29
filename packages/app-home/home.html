@@ -1,0 +1,63 @@
+<template name="Home">
+
+  <div class="home">
+
+    <div class="content">
+      <div class="ui clearing segment profile">
+        <img class="ui tiny spaced circular right floated image" src="{{avatar}}">
+
+        <div class="ui huge left aligned header">{{profile.name}}</div>
+      </div>
+
+      <table class="ui very basic unstackable table">
+        <thead>
+          <tr>
+            <th>Quizzes</th>
+            <th>Completed</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>Quiz #1</td>
+            <td>100%</td>
+            <td>^</td>
+          </tr>
+
+          <tr>
+            <td>Quiz #2</td>
+            <td>0%</td>
+            <td>Play</td>
+          </tr>
+
+          <tr>
+            <td>Quiz #3</td>
+            <td>--</td>
+            <td>Lock</td>
+          </tr>
+
+          <tr>
+            <td>Quiz #4</td>
+            <td>--</td>
+            <td>Lock</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <div class="ui bottom fixed four item menu">
+        <a href="/coming-soon" class="item">quizzes</a>
+        <a href="/coming-soon" class="item">people</a>
+        <a href="/coming-soon" class="item">messages</a>
+        <a href="/coming-soon" class="item">more</a>
+      </div>
+
+      <button class="ui center aligned button" rel="start-over">Start Over</button>
+
+    </div>
+  </div>
+
+</template>
