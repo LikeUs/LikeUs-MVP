@@ -1,3 +1,4 @@
+
 var runTemplate = function(template, viewport) {
   var deferred = Q.defer();
 
@@ -11,7 +12,6 @@ RunOnboarding = function(quiz, viewport) {
   return TakeQuiz(quiz, viewport)
     .then(function() {
       return runTemplate("OnboardingContinue", viewport);
-
     })
     .then(function() {
       return runTemplate("OnboardingGetPhone", viewport);
@@ -106,5 +106,46 @@ Template.OnboardingProfile.events({
     Meteor.logout(function() {
       window.location.reload();
     });
+  }
+});
+
+Template.OnboardingGetPhone.events({
+  "submit form": function(e) {
+    e.preventDefault();
+    var phone = e.currentTarget.phone.value;
+    console.log('foo');
+
+    var deferred = Template.currentData().deferred;
+
+    Meteor.users.update(Meteor.userId(), {
+      $set: {
+        phone: phone
+      }
+    }, function(err) {
+      if (err) {
+        console.log(err);
+        deferred.reject(err);
+      } else {
+        Meteor.sendVerificationCode(phone);
+        deferred.resolve();
+      }
+    });
+  }
+});
+
+Template.OnboardingVerifyPhone.events({
+  "submit form": function(e) {
+    e.preventDefault();
+    var code = e.currentTarget.code.value;
+    var deferred = Template.currentData().deferred;
+    Meteor.loginWithSms(Meteor.user().phone, code, function(err) {
+      if (err) {
+        console.log(err);
+        deferred.reject(err);
+      } else {
+        deferred.resolve();
+      }
+    });
+
   }
 });
