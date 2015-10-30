@@ -21,3 +21,8 @@ App.launchScreens({
   'iphone6': 'resources/splash/750x1294.png',
   'iphone6p_portrait': 'resources/splash/1242x2148.png'	
 });
+
+App.configurePlugin('com.phonegap.plugins.facebookconnect', {
+    APP_ID: '',
+    APP_NAME: ''
+});
